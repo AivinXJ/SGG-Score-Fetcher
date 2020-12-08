@@ -11,4 +11,11 @@
 4. Click create new token
 5. Name your token and copy it
 
-## Now you are good to go!
+# Now time to get your Set ID
+1. Go to the set you want to get the ID of
+2. Copy the number in the end of the URL (shown in the image)
+
+![alt text](https://media.discordapp.net/attachments/777974444005261372/785786887196901416/unknown.png)
+
+# Now you are good to go!
+**Note : You do not have to create a new API Key whenever using the tool, each key expires in one year**
