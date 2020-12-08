@@ -19,3 +19,4 @@
 
 # Now you are good to go!
 **Note : You do not have to create a new API Key whenever using the tool, each key expires in one year**
+[**How to use the tool**](https://github.com/AivinXJ/smashgg-score-changer/blob/main/README.md)
