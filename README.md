@@ -10,11 +10,14 @@
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785831714433925120/unknown.png)
 
 5. Get your smashgg API Key and Set ID ([Learn how here!](https://google.com/)) 
-5. Input your API Key and Set ID here
+6. Input your API Key and Set ID here
 
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785832131406069770/unknown.png)
 
 7. Click the button
 
-# You are all good now! your information are saved to 4 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt)
+##### You are all good now! your information are saved to 4 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt) in the same directory you placed the .py file in!
+
+
+![alt text](https://media.discordapp.net/attachments/430699722903126026/785833781247737906/unknown.png)
 # Do whatever you want with them!
