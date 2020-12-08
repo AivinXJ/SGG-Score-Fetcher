@@ -21,3 +21,7 @@
 
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785833781247737906/unknown.png)
 # Do whatever you want with them!
+
+
+
+For help, DM @AivinXJ On Twitter
