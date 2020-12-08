@@ -9,6 +9,7 @@
 
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785831714433925120/unknown.png)
 
+5. Get your smashgg API Key and Set ID [Learn how here!](https://google.com/) 
 5. Input your API Key and Set ID here
 
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785832131406069770/unknown.png)
