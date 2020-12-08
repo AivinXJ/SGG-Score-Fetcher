@@ -3,7 +3,7 @@
 
 # How to use?
 1. pip install sgqlc
-2. Download the mainfile.py folder
+2. Download the [mainfile.py](https://github.com/AivinXJ/smashgg-score-changer/blob/main/mainfile.py) folder
 3. Place the program in a file that you want all the files to be in (like the TXT files for example)
 4. Run the program and a screen like this must show up
 
