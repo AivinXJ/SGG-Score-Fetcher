@@ -8,3 +8,11 @@
 4. Run the program and a screen like this must show up
 
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785831714433925120/unknown.png)
+
+5. Input your API Key and Set ID here
+
+![alt text](https://media.discordapp.net/attachments/430699722903126026/785832131406069770/unknown.png)
+
+6. Click the button
+
+# You are all good now! your information are saved to 4 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt)
