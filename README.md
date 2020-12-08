@@ -14,7 +14,7 @@
 
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785832131406069770/unknown.png)
 
-6. Click the button
+7. Click the button
 
 # You are all good now! your information are saved to 4 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt)
 # Do whatever you want with them!
