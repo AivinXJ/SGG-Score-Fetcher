@@ -16,3 +16,4 @@
 6. Click the button
 
 # You are all good now! your information are saved to 4 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt)
+# Do whatever you want with them!
