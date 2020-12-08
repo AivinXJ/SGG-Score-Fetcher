@@ -7,4 +7,4 @@
 3. Place the program in a file that you want all the files to be in (like the TXT files for example)
 4. Run the program and a screen like this must show up
 
-[alt text](https://media.discordapp.net/attachments/430699722903126026/785831714433925120/unknown.png)
+![alt text](https://media.discordapp.net/attachments/430699722903126026/785831714433925120/unknown.png)
