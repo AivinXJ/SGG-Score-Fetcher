@@ -16,7 +16,7 @@
 
 7. Click the button
 
-### You are all good now! your information are saved to 4 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt) in the same directory you placed the .py file in!
+### You are all good now! your information are saved to 4 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt) in the same directory you placed the .pyw file in!
 **Note : This also creates a JSON file (The response from the API)**
 
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785833781247737906/unknown.png)
