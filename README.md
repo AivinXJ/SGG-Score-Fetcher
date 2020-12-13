@@ -1,7 +1,7 @@
 # Smashgg Score Changer By @AivinXJ
 ## This tool helps in grabbing the score from smashgg and saving them into TXT files, feel free to use the tool without removing the credits
 
-# How to use?
+# How to manually create?
 1. pip install sgqlc
 2. Download the [mainfile.pyw](https://github.com/AivinXJ/smashgg-score-changer/blob/main/mainfile.pyw) python file
 3. Place the program in a file that you want all the files to be in (like the TXT files for example)
@@ -16,7 +16,10 @@
 
 7. Click the button
 
-### You are all good now! your information are saved to 4 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt) in the same directory you placed the .pyw file in!
+# Downloading the EXE instead of creating everything manually
+Go to ([aivinxj.github.io/smashgg-score.github.io](https://aivinxj.github.io/smashgg-score.github.io)) and click download here!
+
+### You are all good now! your information are saved to 5 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt, and setname.txt) in the same directory you placed the .pyw file in!
 **Note : This also creates a JSON file (The response from the API)**
 
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785833781247737906/unknown.png)
