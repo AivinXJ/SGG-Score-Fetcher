@@ -17,7 +17,7 @@
 7. Click the button
 
 # Downloading the EXE instead of creating everything manually
-Go to ([aivinxj.github.io/smashgg-score.github.io](https://aivinxj.github.io/smashgg-score.github.io)) and click download here!
+Go to [aivinxj.github.io/smashgg-score.github.io](https://aivinxj.github.io/smashgg-score.github.io) and click download here!
 
 ### You are all good now! your information are saved to 5 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt, and setname.txt) in the same directory you placed the .pyw file in!
 **Note : This also creates a JSON file (The response from the API)**
