@@ -1,4 +1,4 @@
-# Patch Notes For 0.2v
+# Patch Notes For v0.2
 Added **setname.txt**
 
 Added a label that shows if you are up-to-date or you need to update
