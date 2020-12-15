@@ -2,7 +2,7 @@
 ## This tool helps in grabbing the score from smashgg and saving them into TXT files, feel free to use the tool without removing the credits
 
 # How to manually create?
-1. pip install sgqlc
+1. pip install sgqlc, Pillow, and requests
 2. Download the [mainfile.pyw](https://github.com/AivinXJ/smashgg-score-changer/blob/main/mainfile.pyw) python file
 3. Place the program in a file that you want all the files to be in (like the TXT files for example)
 4. Run the program and a screen like this must show up
