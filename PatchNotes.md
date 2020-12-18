@@ -3,4 +3,4 @@ Added **setname.txt**
 
 Added a label that shows if you are up-to-date or you need to update
 
-Added a download for a direct exe file
+Added rightlegend.png and leftlegend.png
