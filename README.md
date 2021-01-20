@@ -2,7 +2,7 @@
 ## This tool helps in grabbing the score from smashgg and saving them into TXT files, feel free to use the tool without removing the credits
 
 # How to manually create?
-1. Install python [here](https://www.python.org/downloads/), make sure while installing to add python to PATH
+1. Install python [here](https://www.python.org/downloads/) (Python 3.8.4 Recommended), make sure while installing to add python to PATH
 2. Run the [installer.py](https://github.com/AivinXJ/smashgg-score-changer/blob/main/installer.py)
 3. Download the [mainfile.pyw](https://github.com/AivinXJ/smashgg-score-changer/blob/main/mainfile.pyw) python file
 4. Place the program in a file that you want all the files to be in (like the TXT files for example)
