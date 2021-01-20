@@ -7,11 +7,12 @@ import time
 from PIL import Image
 import requests
 from tkinter import messagebox
-versionhere = "Current Version : 0.2"
+import os
+versionhere = "Current Version : 0.3"
 
 screen = tk.Tk()
 screen.title("Smashgg Auto Score Changer")
-screen.geometry('505x250')
+
 screen.resizable(False, False)
 
 link = f"https://aivinxj.github.io/smashgg-score.github.io/"
@@ -35,7 +36,6 @@ keylabel.pack()
 entry1.pack()
 setidlabel.pack()
 entry2.pack()
-
 def Startthecode():
     try:
         SMASHGG_API_KEY = entry1.get()
@@ -91,11 +91,12 @@ def Startthecode():
         leftscore = data['data']['set']['slots'][0]['standing']['stats']['score']['value']
         rightname = data['data']['set']['slots'][1]['entrant']['name']
         rightscore = data['data']['set']['slots'][1]['standing']['stats']['score']['value']
-        try:
-            leftlegend = data['data']['set']['games'][0]['selections'][0]['selectionValue']
-            rightlegend = data['data']['set']['games'][0]['selections'][1]['selectionValue']
-        except:
-            pass
+        leftlegend = data['data']['set']['games'][0]['selections'][0]['selectionValue'] or None
+        rightlegend = data['data']['set']['games'][0]['selections'][1]['selectionValue'] or None
+        request = Request(f"https://api.smash.gg/set/{SetID}", headers={'User-Agent': 'Mozilla/5.0'})
+        res = urllib.request.urlopen(request).read()
+        OldApiData = json.loads(res)
+
         setname = data['data']['set']['fullRoundText']
 
         if rightscore != None:
@@ -121,20 +122,28 @@ def Startthecode():
             f.write(str(rightscore))
 
         with open('setname.txt', 'w') as f:
-            f.write(str(setname))
+            try:
+                f.write(f"{setname} | BO{OldApiData['entities']['sets']['bestOf']}")
+            except:
+                f.write(f"{setname}")
 
         try:
             with open('leftlegend.txt', 'w') as f:
                 f.write(str(leftlegend))
-
+        except:
+            pass
+        
+        try:
             with open('rightlegend.txt', 'w') as f:
                 f.write(str(rightlegend))
-
-            link = "https://api.smash.gg/characters"
-            request = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
-            res = urllib.request.urlopen(request).read()
-            data = json.loads(res)
-
+        except:
+            pass
+        
+        link = "https://api.smash.gg/characters"
+        request = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
+        res = urllib.request.urlopen(request).read()
+        data = json.loads(res)
+        try:
             var = 0
             with open("leftlegend.txt", 'r') as f:
                 contents = f.read()
@@ -144,13 +153,27 @@ def Startthecode():
                     gameid = data['entities']['character'][var]['videogameId']
                     url = data['entities']['character'][var]['images'][0]['url']
                     if legendid == int(contents):
-                        print(f"({legendname}) {url}")
-                        img = Image.open(requests.get(url, stream=True).raw)
-                        img.save("leftlegend.png")
+                        if gameid == 15:
+                            link = f"https://aivinxj.github.io/smashgg-bh-images.github.io/data/data.json"
+                            request = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
+                            res = urllib.request.urlopen(request).read().decode()
+                            bhimagedata = json.loads(res)
+                            img = Image.open(requests.get(bhimagedata[str(legendid)], stream=True).raw)
+                            # resized_img = img.resize((int(img.size[0] / 10), int(img.size[1] / 10)))
+                            resized_img = img.resize((100, 100))
+                            resized_img.save("leftlegend.png")
+                        else:
+                            img = Image.open(requests.get(url, stream=True).raw)
+                            img.save("leftlegend.png")
 
                     var += 1
+        except:
+            try:
+                os.remove("leftlegend.png")
+            except:
+                pass
 
-
+        try:     
             var = 0
             with open("rightlegend.txt", 'r') as f:
                 contents = f.read()
@@ -160,14 +183,29 @@ def Startthecode():
                     gameid = data['entities']['character'][var]['videogameId']
                     url = data['entities']['character'][var]['images'][0]['url']
                     if legendid == int(contents):
-                        print(f"({legendname}) {url}")
-                        img = Image.open(requests.get(url, stream=True).raw)
-                        img.save("rightlegend.png")
+                        if gameid == 15:
+                            link = f"https://aivinxj.github.io/smashgg-bh-images.github.io/data/data.json"
+                            request = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
+                            res = urllib.request.urlopen(request).read().decode()
+                            bhimagedata = json.loads(res)
+                            img = Image.open(requests.get(bhimagedata[str(legendid)], stream=True).raw)
+                            # resized_img = img.resize((int(img.size[0] / 10), int(img.size[1] / 10)))
+                            resized_img = img.resize((100, 100))
+                            hori_flippedImage = resized_img.transpose(Image.FLIP_LEFT_RIGHT)
+                            hori_flippedImage.save("rightlegend.png")
+                        else:
+                            img = Image.open(requests.get(url, stream=True).raw)
+                            hori_flippedImage = img.transpose(Image.FLIP_LEFT_RIGHT)
+                            hori_flippedImage.save("rightlegend.png")
 
                     var += 1
 
         except:
-            pass
+            try:
+                os.remove("rightlegend.png")
+            except:
+                pass 
+        
 
     except:
         messagebox.showerror("Error (Smashgg Auto Score Changer)", "Make sure you filled all the required boxes and that these numbers are valid.")
