@@ -12,7 +12,7 @@ import webbrowser
 versionhere = "Current Version : 0.3"
 
 screen = tk.Tk()
-screen.title("Smashgg Auto Score Changer")
+screen.title("SGG Score Fetcher")
 
 screen.resizable(False, False)
 
