@@ -25,4 +25,4 @@
 
 
 
-For help, DM @AivinXJ On Twitter
+For help, DM @AivinXJ On Twitter or Create an Issue On This GitHub Repo!
