@@ -1,5 +1,5 @@
 # Smashgg Score Fetcher By @AivinXJ
-## This tool helps in grabbing the score from smashgg and saving them into TXT files, feel free to use the tool without removing the credits
+## This tool helps grab some data from the SmashGG API and saving them into TXT files, feel free to use the tool without removing the credits
 
 # How to manually create?
 1. Install python [here](https://www.python.org/downloads/) (Python 3.8.4 Recommended), make sure while installing to add python to PATH
