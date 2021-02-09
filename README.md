@@ -8,6 +8,8 @@
 4. Place the program in a file that you want all the files to be in (like the TXT files for example)
 5. Run the program and a screen like this must show up
 
+
+<a href="https://google.com">Google</a>
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785831714433925120/unknown.png)
 
 6. Get your smashgg API Key and Set ID ([Learn how here!](https://github.com/AivinXJ/smashgg-score-changer/blob/main/GETKEY.md)) 
