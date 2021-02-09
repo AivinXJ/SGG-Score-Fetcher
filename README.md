@@ -1,9 +1,9 @@
 # Smashgg Score Fetcher By @AivinXJ
-## This tool helps grab some data from the SmashGG API and saving them into TXT files, feel free to use the tool without removing the credits
+## This tool helps grab some data from the SmashGG API and saving them into TXT and CSV files, feel free to use the tool without removing the credits
 
 # How to manually create?
-1. Install python [here](https://www.python.org/downloads/) (Python 3.8.4 Recommended), make sure while installing to add python to PATH
-2. Install the zip [here](https://github.com/AivinXJ/SGG-Score-Fetcher/archive/main.zip), Unzip it and you now have all code needed!
+1. Download and Install python [here](https://www.python.org/downloads/) (Python 3.8.4 Recommended), make sure while installing to add python to PATH
+2. Download the zip [here](https://github.com/AivinXJ/SGG-Score-Fetcher/archive/main.zip), Unzip it and you now have all code needed!
 3. Run the [installer.py](https://github.com/AivinXJ/smashgg-score-changer/blob/main/installer.py)
 4. Download the [mainfile.pyw](https://github.com/AivinXJ/smashgg-score-changer/blob/main/mainfile.pyw) python file
 5. Place the program in a file that you want all the files to be in (like the TXT files for example)
@@ -20,7 +20,7 @@
 
 9. Click the button
 
-### You are all good now! your information are saved to 5 txt files (leftname.txt, leftscore.txt, rightname.txt, rightscore.txt, and setname.txt) in the same directory you placed the .pyw file in!
+### You are all good now! your information are saved in the same directory you placed the .pyw file in!
 **Note : This also creates a JSON file (The response from the API)**
 
 ![alt text](https://media.discordapp.net/attachments/430699722903126026/785833781247737906/unknown.png)
