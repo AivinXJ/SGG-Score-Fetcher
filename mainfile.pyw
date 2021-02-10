@@ -10,7 +10,7 @@ from tkinter import messagebox
 import os
 import webbrowser
 
-versionhere = "Current Version : 0.4"
+versionhere = "Current Version : 0.3"
 
 screen = tk.Tk()
 screen.title("SGG Score Fetcher")
