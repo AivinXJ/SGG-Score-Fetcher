@@ -9,12 +9,18 @@ import requests
 from tkinter import messagebox
 import os
 import webbrowser
-versionhere = "Current Version : 0.3"
+
+versionhere = "Current Version : 0.4"
 
 screen = tk.Tk()
 screen.title("SGG Score Fetcher")
 
+screen_width = screen.winfo_screenwidth()
+screen_height = screen.winfo_screenheight()
+the_geometry = "{}x{}+{}+{}".format((550), (200), (int(screen.winfo_screenwidth() / 2) - screen.winfo_reqwidth() - 80), (int(screen.winfo_screenheight() / 2) - screen.winfo_reqheight()))
+screen.geometry(the_geometry)
 screen.resizable(False, False)
+
 
 link = f"https://aivinxj.github.io/smashgg-score.github.io/"
 request = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
@@ -33,18 +39,26 @@ label1 = tk.Label(text= "Tool Made By @AivinXJ")
 label2 = tk.Label(text= "")
 label3 = tk.Label(text= "")
 keylabel = tk.Label(text= "API Key")
-entry1 = tk.Entry(screen)
+f = open('api_key.txt', 'r')
+api_key_entry = tk.Entry(screen)
+try:
+    api_key_entry.insert(0, f.read())
+except:
+    pass
+f.close()
+
 setidlabel = tk.Label(text= "Set ID")
-entry2 = tk.Entry(screen)
+set_id_entry = tk.Entry(screen)
 # Packing
 keylabel.pack()
-entry1.pack()
+api_key_entry.pack()
 setidlabel.pack()
-entry2.pack()
+set_id_entry.pack()
+
 def Startthecode():
     try:
-        SMASHGG_API_KEY = entry1.get()
-        SetID = entry2.get()
+        SMASHGG_API_KEY = api_key_entry.get()
+        SetID = set_id_entry.get()
         str(SetID)
 
         query = '''
@@ -137,6 +151,9 @@ def Startthecode():
                 f.write(f"{setname} | BO{OldApiData['entities']['sets']['bestOf']}")
             except:
                 f.write(f"{setname}")
+        
+        with open('speadsheet.csv', 'w') as speadsheet:
+            ss_data.write(f"{leftname},{leftscore},{setname},{rightscore},{rightname}")
 
         try:
             with open('leftlegend.txt', 'w') as f:
@@ -180,7 +197,9 @@ def Startthecode():
                     var += 1
         except:
             try:
-                os.remove("leftlegend.png")
+                url = "https://cdn.discordapp.com/attachments/804753013410496552/808587264740294656/100x100Transparent.png"
+                img = Image.open(requests.get(url, stream=True).raw)
+                img.save("leftlegend.png")
             except:
                 pass
 
@@ -213,15 +232,17 @@ def Startthecode():
 
         except:
             try:
-                os.remove("rightlegend.png")
+                url = "https://cdn.discordapp.com/attachments/804753013410496552/808587264740294656/100x100Transparent.png"
+                img = Image.open(requests.get(url, stream=True).raw)
+                img.save("rightlegend.png")
             except:
                 pass 
         
 
     except:
         try:
-            SMASHGG_API_KEY = entry1.get()
-            SetID = entry2.get()
+            SMASHGG_API_KEY = api_key_entry.get()
+            SetID = set_id_entry.get()
             str(SetID)
 
             query = '''
@@ -311,11 +332,12 @@ def Startthecode():
             messagebox.showerror("Error (Smashgg Auto Score Changer)", "Make sure you filled all the required boxes and that these numbers are valid.")
 
         
-btn1 = tk.Button(screen, text= "Call The API", command = Startthecode)
+btn1 = tk.Button(screen, text= "Call The API", command = Startthecode, bg = "#CB333B", fg = "#FFFFFF")
 label3.pack()
 btn1.pack()
 label2.pack()
 label1.pack()
 updatestatus.pack()
+
 
 screen.mainloop()
