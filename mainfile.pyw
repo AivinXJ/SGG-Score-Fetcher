@@ -25,6 +25,7 @@ screen.resizable(False, False)
 link = f"https://aivinxj.github.io/smashgg-score.github.io/"
 request = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
 res = urllib.request.urlopen(request).read().decode('utf-8')
+updatestatus = tk.Label(screen, text= "No update available, your program is up-to-date")
 
 if str(versionhere) not in res:
     def callback(url):
@@ -32,8 +33,6 @@ if str(versionhere) not in res:
 
     updatestatus = tk.Label(screen, text= "An update is available, go to https://aivinxj.github.io/smashgg-score.github.io/ and update it", fg ="#0000ff")
     updatestatus.bind("<Button-1>", lambda e: callback("https://aivinxj.github.io/smashgg-score.github.io/"))
-else:
-    updatestatus = tk.Label(screen, text= "No update available, your program is up-to-date")
 
 label1 = tk.Label(text= "Tool Made By @AivinXJ")
 label2 = tk.Label(text= "")
