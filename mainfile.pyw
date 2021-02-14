@@ -17,7 +17,7 @@ screen.title("SGG Score Fetcher")
 
 screen_width = screen.winfo_screenwidth()
 screen_height = screen.winfo_screenheight()
-the_geometry = "{}x{}+{}+{}".format((550), (200), (int(screen.winfo_screenwidth() / 2) - screen.winfo_reqwidth() - 80), (int(screen.winfo_screenheight() / 2) - screen.winfo_reqheight()))
+the_geometry = "{}x{}+{}+{}".format((550), (250), (int(screen.winfo_screenwidth() / 2) - screen.winfo_reqwidth() - 80), (int(screen.winfo_screenheight() / 2) - screen.winfo_reqheight()))
 screen.geometry(the_geometry)
 screen.resizable(False, False)
 
@@ -25,7 +25,6 @@ screen.resizable(False, False)
 link = f"https://aivinxj.github.io/smashgg-score.github.io/"
 request = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
 res = urllib.request.urlopen(request).read().decode('utf-8')
-updatestatus = tk.Label(screen, text= "No update available, your program is up-to-date")
 
 if str(versionhere) not in res:
     def callback(url):
@@ -33,22 +32,26 @@ if str(versionhere) not in res:
 
     updatestatus = tk.Label(screen, text= "An update is available, go to https://aivinxj.github.io/smashgg-score.github.io/ and update it", fg ="#0000ff")
     updatestatus.bind("<Button-1>", lambda e: callback("https://aivinxj.github.io/smashgg-score.github.io/"))
+else:
+    updatestatus = tk.Label(screen, text= "No update available, your program is up-to-date")
 
 label1 = tk.Label(text= "Tool Made By @AivinXJ")
 label2 = tk.Label(text= "")
 label3 = tk.Label(text= "")
 keylabel = tk.Label(text= "API Key")
-f = open('api_key.txt', 'r')
 api_key_entry = tk.Entry(screen)
+
 try:
+    f = open('api_key.txt', 'r')
     api_key_entry.insert(0, f.read())
+    f.close()
 except:
     pass
-f.close()
+
 
 setidlabel = tk.Label(text= "Set ID")
 set_id_entry = tk.Entry(screen)
-# Packing
+
 keylabel.pack()
 api_key_entry.pack()
 setidlabel.pack()
