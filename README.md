@@ -1,5 +1,4 @@
 # Smashgg Score Fetcher By [@AivinXJ](https://twitter.com/AivinXJ)
-![Downloads](https://github.com/AivinXJ)
 ## This tool helps grab some data from the SmashGG API and saving them into TXT and CSV files, feel free to use the tool without removing the credits
 
 # How to manually create?
